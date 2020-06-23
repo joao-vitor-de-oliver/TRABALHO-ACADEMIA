@@ -54,6 +54,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ACADEMIADataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CAMADAS\BLL\Alunos.cs" />
+    <Compile Include="CAMADAS\BLL\Atletas.cs" />
+    <Compile Include="CAMADAS\BLL\Tutores.cs" />
     <Compile Include="CAMADAS\DAL\Alunos.cs" />
     <Compile Include="CAMADAS\DAL\Atletas.cs" />
     <Compile Include="CAMADAS\DAL\Conexao.cs" />
@@ -206,9 +209,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CAMADAS\BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />

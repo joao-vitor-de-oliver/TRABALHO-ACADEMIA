@@ -20,6 +20,7 @@ namespace ACADEMIA
         private void Cadastro_de_tutores_Click(object sender, EventArgs e)
         {
             CAMADAS.MODEL.Tutores tutor = new CAMADAS.MODEL.Tutores();
+            CAMADAS.BLL.Tutores bllTutores = new CAMADAS.BLL.Tutores();
             tutor.Nome = txtNome.Text;
             tutor.Salario = Convert.ToInt32(txtSalario.Text);
             CAMADAS.DAL.Tutores dalTut = new CAMADAS.DAL.Tutores();
@@ -31,6 +32,7 @@ namespace ACADEMIA
         private void Editar_tutores_Click(object sender, EventArgs e)
         {
             CAMADAS.MODEL.Tutores tutor = new CAMADAS.MODEL.Tutores();
+            CAMADAS.BLL.Tutores bllTutores = new CAMADAS.BLL.Tutores();
             tutor.Id = Convert.ToInt32(txtId.Text);
             tutor.Nome = txtNome.Text;
             tutor.Salario = Convert.ToInt32(txtSalario.Text);
@@ -46,6 +48,7 @@ namespace ACADEMIA
         {
             int idTut = Convert.ToInt32(txtId.Text);
             CAMADAS.DAL.Tutores dalTut = new CAMADAS.DAL.Tutores();
+            CAMADAS.BLL.Tutores bllTutores = new CAMADAS.BLL.Tutores();
             dalTut.Delete(idTut);
 
             DtGrvTutores.DataSource = " ";

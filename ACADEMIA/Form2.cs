@@ -25,7 +25,12 @@ namespace ACADEMIA
 
         private void TxtCadastrar_aluno_Click(object sender, EventArgs e)
         {
+            CAMADAS.BLL.Alunos bllAlunos = new CAMADAS.BLL.Alunos();
             CAMADAS.MODEL.Alunos alunos = new CAMADAS.MODEL.Alunos();
+            //String msg = "";
+            // string caixa = "ATENÇÃO";
+            // if (idtxt.Text != "-1")
+            // msg = "Deseja realizar um novo cadastro?";
             alunos.Nome = Nometxt.Text;
             alunos.Idade = Convert.ToInt32(Idadetxt.Text);
             alunos.Telefone = Telefonetxt.Text;
@@ -47,7 +52,7 @@ namespace ACADEMIA
         private void TxtEditar_aluno_Click(object sender, EventArgs e)
         {
             CAMADAS.MODEL.Alunos alunos = new CAMADAS.MODEL.Alunos();
-
+            CAMADAS.BLL.Alunos bllAlunos = new CAMADAS.BLL.Alunos();
             alunos.Id = Convert.ToInt32(idtxt.Text);
             alunos.Nome = Nometxt.Text;
             alunos.Idade = Convert.ToInt32(Idadetxt.Text);
@@ -64,7 +69,7 @@ namespace ACADEMIA
         private void TxtRemover_aluno_Click(object sender, EventArgs e)
         {
             int idAlu = Convert.ToInt32(idtxt.Text);
-
+            CAMADAS.BLL.Alunos bllAlunos = new CAMADAS.BLL.Alunos();
             CAMADAS.DAL.Alunos dalAlu = new CAMADAS.DAL.Alunos();
             dalAlu.Delete(idAlu);
 
@@ -87,6 +92,14 @@ namespace ACADEMIA
             Diastxt.Text = DtGrvAlunos.SelectedRows[0].Cells["dias"].Value.ToString();
 
         }
-        // BOLSONARO
+       // private void habilitaControles(bool status)
+        //{
+          //  txtNome.Enabled = status;
+          //  TxtIdade.Enabled = status;
+          //  txtTelefone.Enabled = status;
+          //  txtMulta.Enabled = status;
+          //  txtDias.Enabled = status;
+        //}
+        // habilitacontroles(true ou false);
     }
 }

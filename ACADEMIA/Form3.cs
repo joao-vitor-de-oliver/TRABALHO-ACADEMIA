@@ -21,6 +21,7 @@ namespace ACADEMIA
         private void TxtCadastrar_Atleta_Click(object sender, EventArgs e)
         {
             CAMADAS.MODEL.Atletas atleta = new CAMADAS.MODEL.Atletas();
+            CAMADAS.BLL.Atletas bllAtletas = new CAMADAS.BLL.Atletas();
             atleta.Nome = Nometxt.Text;
             atleta.Telefone = Telefonetxt.Text;
             CAMADAS.DAL.Atletas dalAtle = new CAMADAS.DAL.Atletas();
@@ -33,7 +34,7 @@ namespace ACADEMIA
         private void TxtEditar_Atleta_Click(object sender, EventArgs e)
         {
             CAMADAS.MODEL.Atletas atleta = new CAMADAS.MODEL.Atletas();
-
+            CAMADAS.BLL.Atletas bllAtletas = new CAMADAS.BLL.Atletas();
             atleta.Id = Convert.ToInt32(Idtxt.Text);
             atleta.Nome = Nometxt.Text;
             atleta.Telefone = Telefonetxt.Text;
@@ -48,6 +49,7 @@ namespace ACADEMIA
         private void TxtRemover_Atleta_Click(object sender, EventArgs e)
         {
             int idAtle =  Convert.ToInt32(Idtxt.Text);
+            CAMADAS.BLL.Atletas bllAtletas = new CAMADAS.BLL.Atletas();
             CAMADAS.DAL.Atletas dalAtle = new CAMADAS.DAL.Atletas();
             dalAtle.Delete(idAtle);
             DtGrvAtletas.DataSource = "";
