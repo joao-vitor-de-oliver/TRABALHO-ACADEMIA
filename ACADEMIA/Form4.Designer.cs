@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.voltar_a_tela_inicial = new FontAwesome.Sharp.IconButton();
@@ -54,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(74)))), ((int)(((byte)(103)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.voltar_a_tela_inicial);
             this.panel1.Controls.Add(this.remover_tutores);
@@ -78,10 +79,14 @@
             // 
             // voltar_a_tela_inicial
             // 
+            this.voltar_a_tela_inicial.FlatAppearance.BorderSize = 0;
+            this.voltar_a_tela_inicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.voltar_a_tela_inicial.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.voltar_a_tela_inicial.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.voltar_a_tela_inicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar_a_tela_inicial.IconChar = FontAwesome.Sharp.IconChar.Backward;
             this.voltar_a_tela_inicial.IconColor = System.Drawing.Color.Black;
-            this.voltar_a_tela_inicial.IconSize = 16;
+            this.voltar_a_tela_inicial.IconSize = 30;
+            this.voltar_a_tela_inicial.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.voltar_a_tela_inicial.Location = new System.Drawing.Point(0, 237);
             this.voltar_a_tela_inicial.Name = "voltar_a_tela_inicial";
             this.voltar_a_tela_inicial.Rotation = 0D;
@@ -94,10 +99,14 @@
             // 
             // remover_tutores
             // 
+            this.remover_tutores.FlatAppearance.BorderSize = 0;
+            this.remover_tutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.remover_tutores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.remover_tutores.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.remover_tutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remover_tutores.IconChar = FontAwesome.Sharp.IconChar.UserTimes;
             this.remover_tutores.IconColor = System.Drawing.Color.Black;
-            this.remover_tutores.IconSize = 16;
+            this.remover_tutores.IconSize = 30;
+            this.remover_tutores.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.remover_tutores.Location = new System.Drawing.Point(0, 161);
             this.remover_tutores.Name = "remover_tutores";
             this.remover_tutores.Rotation = 0D;
@@ -109,10 +118,14 @@
             // 
             // Editar_tutores
             // 
+            this.Editar_tutores.FlatAppearance.BorderSize = 0;
+            this.Editar_tutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Editar_tutores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Editar_tutores.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Editar_tutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Editar_tutores.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
             this.Editar_tutores.IconColor = System.Drawing.Color.Black;
-            this.Editar_tutores.IconSize = 16;
+            this.Editar_tutores.IconSize = 30;
+            this.Editar_tutores.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Editar_tutores.Location = new System.Drawing.Point(0, 85);
             this.Editar_tutores.Name = "Editar_tutores";
             this.Editar_tutores.Rotation = 0D;
@@ -124,10 +137,14 @@
             // 
             // Cadastro_de_tutores
             // 
+            this.Cadastro_de_tutores.FlatAppearance.BorderSize = 0;
+            this.Cadastro_de_tutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cadastro_de_tutores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Cadastro_de_tutores.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Cadastro_de_tutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cadastro_de_tutores.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             this.Cadastro_de_tutores.IconColor = System.Drawing.Color.Black;
-            this.Cadastro_de_tutores.IconSize = 16;
+            this.Cadastro_de_tutores.IconSize = 30;
+            this.Cadastro_de_tutores.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cadastro_de_tutores.Location = new System.Drawing.Point(0, 8);
             this.Cadastro_de_tutores.Name = "Cadastro_de_tutores";
             this.Cadastro_de_tutores.Rotation = 0D;
@@ -139,7 +156,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(74)))), ((int)(((byte)(103)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(389, 12);
             this.panel2.Name = "panel2";
@@ -158,7 +175,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(74)))), ((int)(((byte)(103)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.panel3.Controls.Add(this.txtSalario);
             this.panel3.Controls.Add(this.txtNome);
             this.panel3.Controls.Add(this.txtId);
@@ -226,10 +243,17 @@
             // 
             // DtGrvTutores
             // 
-            this.DtGrvTutores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(70)))), ((int)(((byte)(103)))));
+            this.DtGrvTutores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(135)))), ((int)(((byte)(168)))));
             this.DtGrvTutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtGrvTutores.Location = new System.Drawing.Point(318, 257);
+            this.DtGrvTutores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
+            this.DtGrvTutores.Location = new System.Drawing.Point(331, 257);
             this.DtGrvTutores.Name = "DtGrvTutores";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(135)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.DtGrvTutores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrvTutores.Size = new System.Drawing.Size(343, 181);
             this.DtGrvTutores.TabIndex = 3;
             this.DtGrvTutores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGrvTutores_CellContentClick);
@@ -239,12 +263,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(135)))), ((int)(((byte)(168)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DtGrvTutores);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtVoltar_a_tela_inicial = new FontAwesome.Sharp.IconButton();
             this.TxtRemover_Atleta = new FontAwesome.Sharp.IconButton();
@@ -37,6 +38,9 @@
             this.TxtCadastrar_Atleta = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DtGrvAtletas = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +67,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(103)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.TxtVoltar_a_tela_inicial);
             this.panel1.Controls.Add(this.TxtRemover_Atleta);
             this.panel1.Controls.Add(this.TxtEditar_Atleta);
@@ -77,10 +81,14 @@
             // 
             // TxtVoltar_a_tela_inicial
             // 
+            this.TxtVoltar_a_tela_inicial.FlatAppearance.BorderSize = 0;
+            this.TxtVoltar_a_tela_inicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TxtVoltar_a_tela_inicial.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.TxtVoltar_a_tela_inicial.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.TxtVoltar_a_tela_inicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtVoltar_a_tela_inicial.IconChar = FontAwesome.Sharp.IconChar.Backward;
             this.TxtVoltar_a_tela_inicial.IconColor = System.Drawing.Color.Black;
-            this.TxtVoltar_a_tela_inicial.IconSize = 16;
+            this.TxtVoltar_a_tela_inicial.IconSize = 30;
+            this.TxtVoltar_a_tela_inicial.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.TxtVoltar_a_tela_inicial.Location = new System.Drawing.Point(1, 229);
             this.TxtVoltar_a_tela_inicial.Name = "TxtVoltar_a_tela_inicial";
             this.TxtVoltar_a_tela_inicial.Rotation = 0D;
@@ -92,10 +100,14 @@
             // 
             // TxtRemover_Atleta
             // 
+            this.TxtRemover_Atleta.FlatAppearance.BorderSize = 0;
+            this.TxtRemover_Atleta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TxtRemover_Atleta.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.TxtRemover_Atleta.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.TxtRemover_Atleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRemover_Atleta.IconChar = FontAwesome.Sharp.IconChar.UserTimes;
             this.TxtRemover_Atleta.IconColor = System.Drawing.Color.Black;
-            this.TxtRemover_Atleta.IconSize = 16;
+            this.TxtRemover_Atleta.IconSize = 30;
+            this.TxtRemover_Atleta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.TxtRemover_Atleta.Location = new System.Drawing.Point(0, 159);
             this.TxtRemover_Atleta.Name = "TxtRemover_Atleta";
             this.TxtRemover_Atleta.Rotation = 0D;
@@ -107,10 +119,14 @@
             // 
             // TxtEditar_Atleta
             // 
+            this.TxtEditar_Atleta.FlatAppearance.BorderSize = 0;
+            this.TxtEditar_Atleta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TxtEditar_Atleta.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.TxtEditar_Atleta.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.TxtEditar_Atleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEditar_Atleta.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
             this.TxtEditar_Atleta.IconColor = System.Drawing.Color.Black;
-            this.TxtEditar_Atleta.IconSize = 16;
+            this.TxtEditar_Atleta.IconSize = 30;
+            this.TxtEditar_Atleta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.TxtEditar_Atleta.Location = new System.Drawing.Point(0, 89);
             this.TxtEditar_Atleta.Name = "TxtEditar_Atleta";
             this.TxtEditar_Atleta.Rotation = 0D;
@@ -122,10 +138,14 @@
             // 
             // TxtCadastrar_Atleta
             // 
+            this.TxtCadastrar_Atleta.FlatAppearance.BorderSize = 0;
+            this.TxtCadastrar_Atleta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TxtCadastrar_Atleta.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.TxtCadastrar_Atleta.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.TxtCadastrar_Atleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCadastrar_Atleta.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             this.TxtCadastrar_Atleta.IconColor = System.Drawing.Color.Black;
-            this.TxtCadastrar_Atleta.IconSize = 16;
+            this.TxtCadastrar_Atleta.IconSize = 30;
+            this.TxtCadastrar_Atleta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.TxtCadastrar_Atleta.Location = new System.Drawing.Point(0, 19);
             this.TxtCadastrar_Atleta.Name = "TxtCadastrar_Atleta";
             this.TxtCadastrar_Atleta.Rotation = 0D;
@@ -148,19 +168,51 @@
             // DtGrvAtletas
             // 
             this.DtGrvAtletas.AutoGenerateColumns = false;
-            this.DtGrvAtletas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(70)))), ((int)(((byte)(103)))));
+            this.DtGrvAtletas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(135)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtGrvAtletas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrvAtletas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrvAtletas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nome,
+            this.telefone,
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
             this.DtGrvAtletas.DataSource = this.atletasBindingSource;
+            this.DtGrvAtletas.EnableHeadersVisualStyles = false;
+            this.DtGrvAtletas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.DtGrvAtletas.Location = new System.Drawing.Point(316, 276);
             this.DtGrvAtletas.Name = "DtGrvAtletas";
             this.DtGrvAtletas.Size = new System.Drawing.Size(341, 154);
             this.DtGrvAtletas.TabIndex = 1;
             this.DtGrvAtletas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGrvAtletas_CellContentClick);
             this.DtGrvAtletas.DoubleClick += new System.EventHandler(this.DtGrvAtletas_DoubleClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "nome";
+            this.nome.Name = "nome";
+            // 
+            // telefone
+            // 
+            this.telefone.DataPropertyName = "telefone";
+            this.telefone.HeaderText = "telefone";
+            this.telefone.Name = "telefone";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -193,7 +245,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(103)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.panel2.Controls.Add(this.Telefonetxt);
             this.panel2.Controls.Add(this.Nometxt);
             this.panel2.Controls.Add(this.Idtxt);
@@ -262,7 +314,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(70)))), ((int)(((byte)(103)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(22)))), ((int)(((byte)(87)))));
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(363, 12);
             this.panel3.Name = "panel3";
@@ -287,12 +339,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(135)))), ((int)(((byte)(168)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.DtGrvAtletas);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
@@ -331,6 +385,9 @@
         private ACADEMIADataSet aCADEMIADataSet;
         private System.Windows.Forms.BindingSource atletasBindingSource;
         private ACADEMIADataSetTableAdapters.AtletasTableAdapter atletasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;

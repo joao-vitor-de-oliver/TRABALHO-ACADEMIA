@@ -92,13 +92,67 @@ namespace ACADEMIA
             Diastxt.Text = DtGrvAlunos.SelectedRows[0].Cells["dias"].Value.ToString();
 
         }
-       // private void habilitaControles(bool status)
+
+        private void TxtBuscar_Click(object sender, EventArgs e)
+        {
+           
+            GpBPesquisa.Visible = !GpBPesquisa.Visible;
+        }
+
+        private void RdbId_CheckedChanged(object sender, EventArgs e)
+        {
+            LblFiltrar.Text = "Informe ID";
+            TxtFiltro.Text = "";
+            LblFiltrar.Visible = true;
+            TxtFiltro.Visible = true;
+            TxtFiltro.Focus();
+        }
+
+        private void RdbNome_CheckedChanged(object sender, EventArgs e)
+        {
+            LblFiltrar.Text = "Informe o Nome";
+            TxtFiltro.Text = "";
+            LblFiltrar.Visible = true;
+            TxtFiltro.Visible = true;
+            TxtFiltro.Focus();
+        }
+
+        private void RdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            LblFiltrar.Visible = false;
+            TxtFiltro.Visible = false;
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            CAMADAS.BLL.Alunos bllAlunos = new CAMADAS.BLL.Alunos();
+            List<CAMADAS.MODEL.Alunos> lstAlunos = new List<CAMADAS.MODEL.Alunos>();
+            if (RdbTodos.Checked)
+                lstAlunos = bllAlunos.Select();
+
+            else if (RdbId.Checked)
+            {
+                int id = Convert.ToInt32(TxtFiltro.Text);
+                lstAlunos = bllAlunos.SelectByID(id);
+            }
+            else lstAlunos = bllAlunos.SelectByNome(TxtFiltro.Text);
+            DtGrvAlunos.DataSource = "";
+            DtGrvAlunos.DataSource = lstAlunos;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        // private void habilitaControles(bool status)
         //{
-          //  txtNome.Enabled = status;
-          //  TxtIdade.Enabled = status;
-          //  txtTelefone.Enabled = status;
-          //  txtMulta.Enabled = status;
-          //  txtDias.Enabled = status;
+        //  txtNome.Enabled = status;
+        //  TxtIdade.Enabled = status;
+        //  txtTelefone.Enabled = status;
+        //  txtMulta.Enabled = status;
+        //  txtDias.Enabled = status;
         //}
         // habilitacontroles(true ou false);
     }

@@ -52,6 +52,7 @@ namespace ACADEMIA
             CAMADAS.BLL.Atletas bllAtletas = new CAMADAS.BLL.Atletas();
             CAMADAS.DAL.Atletas dalAtle = new CAMADAS.DAL.Atletas();
             dalAtle.Delete(idAtle);
+
             DtGrvAtletas.DataSource = "";
             DtGrvAtletas.DataSource = dalAtle.Select();
 

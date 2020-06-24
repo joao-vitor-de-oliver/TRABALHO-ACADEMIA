@@ -16,6 +16,16 @@ namespace ACADEMIA.CAMADAS.BLL
             DAL.Alunos dalAlunos = new DAL.Alunos();
             return dalAlunos.Select();
         }
+        public List<MODEL.Alunos> SelectByID(int id)
+        {
+            DAL.Alunos dalAlunos = new DAL.Alunos();
+            return dalAlunos.SelectByID(id);
+        }
+        public List<MODEL.Alunos> SelectByNome(string nome)
+        {
+            DAL.Alunos dalAlunos = new DAL.Alunos();
+            return dalAlunos.SelectByNome(nome);
+        }
         public void Insert(MODEL.Alunos alunos)
         {
             DAL.Alunos dalAlunos = new DAL.Alunos();
