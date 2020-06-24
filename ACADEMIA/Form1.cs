@@ -104,5 +104,16 @@ namespace ACADEMIA
 		{
 			ActivateButton(sender, RGBColors.color1);
 		}
+
+		private void Desligar_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void horafecha_Tick(object sender, EventArgs e)
+		{
+			LblHora.Text = DateTime.Now.ToLongTimeString();
+			LblFecha.Text = DateTime.Now.ToLongDateString();
+		}
 	}
 }
