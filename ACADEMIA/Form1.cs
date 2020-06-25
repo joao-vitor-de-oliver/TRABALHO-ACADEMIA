@@ -103,6 +103,8 @@ namespace ACADEMIA
 		private void IconButton5_Click(object sender, EventArgs e)
 		{
 			ActivateButton(sender, RGBColors.color1);
+			Form5 form5 = new Form5();
+			form5.Show();
 		}
 
 		private void Desligar_Click(object sender, EventArgs e)
